@@ -9,6 +9,7 @@ const PostPage = ({ post }) => (
       <h2>{post.title}</h2>
     </Page.Header>
     <Page.Content>
+      <img src={post.cover_image} style={{ borderRadius: '20px' }} />
       <div dangerouslySetInnerHTML={{ __html: post.body_html }} />
     </Page.Content>
   </Page>
