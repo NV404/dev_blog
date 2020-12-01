@@ -1,7 +1,7 @@
 import React from 'react'
 import { getPosts, getProfile } from './api/posts/index'
 import { Page } from '@geist-ui/react'
-import Post from './components/Post/index'
+import Post from '../components/Post/index'
 
 const IndexPage = ({ posts, profile }) => (
   <Page style={{ minHeight: 'auto' }}>
