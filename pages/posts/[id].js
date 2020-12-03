@@ -1,18 +1,22 @@
 import React from 'react'
 import Link from 'next/link'
-import { Page } from '@geist-ui/react'
+import Container from '@material-ui/core/Container';
+import Head from 'next/head';
 
 const PostPage = ({ post }) => (
-  <Page>
-    <Page.Header>
-      <Link href="/"><p style={{ margin: '20px', cursor: "pointer", color: "#3291ff" }}>← Back To Home</p></Link>
-      <h2>{post.title}</h2>
-    </Page.Header>
-    <Page.Content>
-      <img src={post.cover_image} style={{ borderRadius: '20px' }} />
+  <>
+    <Head>
+      <title>{post.title}</title>
+    </Head>
+    <Link href="/"><button style={{ backgroundColor: "transparent", border: "none", cursor: "pointer", color: "#3291ff", margin: '10px', fontSize: '15px' }}>← Back To Home</button></Link>
+    <Container>
+      <center>
+        <h1>{post.title}</h1>
+        <img src={post.cover_image} style={{ borderRadius: '20px', maxWidth: '95vw' }} />
+      </center>
       <div dangerouslySetInnerHTML={{ __html: post.body_html }} />
-    </Page.Content>
-  </Page>
+    </Container>
+  </>
 )
 
 export async function getServerSideProps({ query }) {
