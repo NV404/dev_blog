@@ -10,7 +10,7 @@ const IndexPage = ({ posts, profile }) => (
     </Head>
     <Container>
       <div style={{ backgroundColor: "#5e32b6", width: "100%", height: "22vh", marginTop: "100px", display: "flex", alignItems: "center", justifyContent: "space-evenly", flexDirection: "column", borderRadius: '5px' }}>
-        <img src={profile.profile_image} style={{ borderRadius: '50%', width: '120px', marginTop: '-70px' }} />
+        <img alt="Profile Image" src={profile.profile_image} style={{ borderRadius: '50%', width: '120px', marginTop: '-70px' }} />
         <p style={{ color: "white" }}>{profile.summary}</p>
         <div style={{ padding: '10px', width: '30%', display: "flex", alignItems: "center", justifyContent: "space-evenly" }}>
           <a href={"https://github.com/" + profile.github_username + "/"} target="_black" rel="noopener" class="github">

@@ -14,7 +14,7 @@ const PostPage = ({ post }) => (
     <Container>
       <center>
         <h1>{post.title}</h1>
-        <img src={post.cover_image} style={{ borderRadius: '20px', maxWidth: '95vw' }} />
+        <img alt="Cover Image" src={post.cover_image} style={{ borderRadius: '20px', maxWidth: '95vw' }} />
       </center>
       <div dangerouslySetInnerHTML={{ __html: post.body_html }} />
     </Container>
